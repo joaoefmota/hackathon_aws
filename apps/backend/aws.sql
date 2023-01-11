@@ -2,6 +2,10 @@ CREATE DATABASE aws;
 
 USE aws;
 
+DROP TABLE IF EXISTS bookings;
+
+DROP TABLE IF EXISTS vehicles;
+
 CREATE TABLE
     `bookings` (
         title varchar(255),
