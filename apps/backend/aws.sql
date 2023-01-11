@@ -1,3 +1,6 @@
+CREATE DATABASE aws;
+USE aws;
+
 CREATE TABLE
     `bookings` (
         title varchar(255),
