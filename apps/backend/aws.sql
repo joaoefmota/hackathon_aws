@@ -1,4 +1,5 @@
 CREATE DATABASE aws;
+
 USE aws;
 
 CREATE TABLE
@@ -17,7 +18,9 @@ CREATE TABLE
         brand varchar(255),
         seats varchar(255),
         rental_price varchar(255),
-        gear_box varchar(255)
+        gear_box varchar(255),
+        fuel_consumption varchar(255),
+        yearcar int NOT NULL
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 insert into
@@ -25,18 +28,24 @@ insert into
         brand,
         seats,
         rental_price,
-        gear_box
+        gear_box,
+        fuel_consumption,
+        yearcar
     )
 values (
         'Volkswagen',
         4,
         '20€/h',
-        'Manual'
+        'Manual',
+        'test',
+        1996
     ), (
         'Mercedes',
         5,
         '30€/h',
-        'Automatic'
+        'Automatic',
+        'test',
+        2000
     );
 
 insert into
