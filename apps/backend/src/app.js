@@ -1,10 +1,10 @@
 // PACKAGES
-import express from "express";
-import database from "./database";
-import cors from "cors";
-import helmet from "helmet";
+const express = require("express");
+const database = require("./database");
+const cors = require("cors");
+const helmet = require("helmet");
 
-import MainRouter from "./routes";
+const MainRouter = require("./routes");
 
 const PORT = process.env.EXPRESS_APP_PORT || "5000";
 const FRONT = process.env.FRONTEND_PORT || "http://localhost:3000";
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 
 app.use("/api", MainRouter);
 
-app.listen(PORT, (err: boolean) => {
+app.listen(PORT, (err) => {
   if (err) {
     console.error("Something bad happened");
   } else if (database.getConnection() == null) {
