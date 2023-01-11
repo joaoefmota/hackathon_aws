@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { getAllUsers } from "./usersHandlers";
+import { getAllBookings } from "./usersHandlers";
 
 const UsersRouter = Router();
 
-UsersRouter.get("/", getAllUsers);
+UsersRouter.get("/", getAllBookings);
 
 export default UsersRouter;
