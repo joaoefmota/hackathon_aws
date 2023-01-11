@@ -6,3 +6,6 @@ export const getAllVehicles = (req: Request, res: Response) => {
     res.json(result[0]);
   });
 };
+
+
+
