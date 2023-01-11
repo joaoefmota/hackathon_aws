@@ -1,11 +1,14 @@
 import { Router } from "express";
-import UsersRouter from "../users/usersRoutes";
+import BookingsRouter from "../bookings/bookingsRoutes";
+import VehiclesRouter from "../vehicles/vehiclesRoutes";
 
 // import AuthRouter from "./auth/authRoutes";
 
 const MainRouter = Router();
 
-MainRouter.use("/users", UsersRouter);
+MainRouter.use("/bookings", BookingsRouter);
 // MainRouter.use("/auth", AuthRouter);
+
+MainRouter.use("/vehicles", VehiclesRouter);
 
 export default MainRouter;
