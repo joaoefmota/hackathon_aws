@@ -2,6 +2,7 @@ import axios from "axios";
 import * as React from "react";
 import VehicleList from "../components/VehicleList";
 import styles from "./home.module.scss";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [vehicles, setVehicles] = React.useState([]);
@@ -36,18 +37,11 @@ export default function Home() {
         <div className={styles["bodytext2"]}>
           Choose your perfect vintage car
         </div>
-        <VehicleList vehicles={vehicles} /  >
+        <VehicleList vehicles={vehicles} />
       </div>
       {/*Body*/}
       {/*Footer*/}
-      <div className={styles["footer"]}>
-        <div className={styles["footercontainer"]}>
-          <div className={styles["footertext"]}>HELLO@VINTAGE.DE</div>
-          <div className={styles["footertext"]}> (478) 458-4258</div>
-        </div>
-        <div className={styles["footerig"]}></div>
-        <div className={styles["footerfb"]}></div>
-      </div>
+      <Footer />
       {/*Footer*/}
     </>
   );
