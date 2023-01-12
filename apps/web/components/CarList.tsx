@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import CarContext from "../contexts/CarContext";
 
@@ -13,16 +14,20 @@ function CarList() {
       {contents == null ? (
         <p>Loading...</p>
       ) : (
-        <>
-          <p>Do the thing please</p>
-          <h2 className={""}>{contents.brand}</h2>
+        <div>
+          <Link href={"/"}>
+            <div className={secondPage["arrow"]}></div>
+          </Link>
+          <h3 className={secondPage["global-text"]}>{contents.brand}</h3>
           <Image
+            className={secondPage["car-image"]}
             src={secondImage}
             alt="Vehicle Second"
-            width={256}
-            height={256}
+            width={200}
+            height={150}
           />
-        </>
+          <p className={secondPage["global-text"]}>Specifications</p>
+        </div>
       )}
     </div>
   );
