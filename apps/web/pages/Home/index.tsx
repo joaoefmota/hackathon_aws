@@ -30,9 +30,14 @@ const Home = () => {
     <>
       {/*Header*/}
       <div className={styles["test"]}>
-        <button>Log In</button>
-        <button>Register</button>
-        <button></button>
+        <div className={styles["test5"]}>
+          <button className={styles["test4"]}></button>
+          <div className={styles["test6"]}></div>
+          <div className={styles["test2"]}>
+            <button className={styles["test1"]}>Log In</button>
+            <button className={styles["test1"]}>Register</button>
+          </div>
+        </div>
       </div>
       <div className={styles["cars-container"]}>
         {contents == null ? (
