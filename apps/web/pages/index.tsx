@@ -37,12 +37,9 @@ export default function Home() {
         <div className={styles["bodytext2"]}>
           Choose your perfect vintage car
         </div>
-        <VehicleList vehicles={vehicles} />
       </div>
-      {/*Body*/}
-      {/*Footer*/}
+      <VehicleList vehicles={vehicles} />
       <Footer />
-      {/*Footer*/}
     </div>
   );
 }

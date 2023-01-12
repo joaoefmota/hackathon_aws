@@ -1,4 +1,5 @@
 declare interface Vehicle {
+  model: never;
   brand: string;
   fuel_consumption: string;
   gear_box: string;
