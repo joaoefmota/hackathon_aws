@@ -17,7 +17,7 @@ export default function VehicleListItem({ vehicle }: VehicleListItemProps) {
           {vehicle.brand}
         </h2>
         <Image
-          alt="alt my ass"
+          alt="alt"
           src={`http://localhost:5000${vehicle.image_main}`}
           width={256}
           height={256}

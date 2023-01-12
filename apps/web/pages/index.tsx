@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={styles["global-text"]}>
+    <div>
       {/*Header*/}
       <div className={styles["test"]}>
         <div className={styles["test5"]}>

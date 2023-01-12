@@ -18,7 +18,7 @@ function CarList() {
           <Link href={"/"}>
             <div className={secondPage["arrow"]}></div>
           </Link>
-          <h3 className={secondPage["global-text"]}>{contents.brand}</h3>
+          <h2 className={secondPage["global-text"]}>{contents.brand}</h2>
           <Image
             className={secondPage["car-image"]}
             src={secondImage}
@@ -26,7 +26,34 @@ function CarList() {
             width={200}
             height={150}
           />
-          <p className={secondPage["global-text"]}>Specifications</p>
+          <h3 className={secondPage["global-text"]}>Specifications</h3>
+          <div className={secondPage["specification-grid"]}>
+            <div className={secondPage["specification-containers"]}>
+              <p>
+                Seats:
+                <br />
+                {contents.seats}
+              </p>
+            </div>
+            <div className={secondPage["specification-containers"]}>
+              <p>
+                Gear box:
+                <br />
+                {contents.gear_box}{" "}
+              </p>
+            </div>
+            <div className={secondPage["specification-containers"]}>
+              Fuel consumption:
+              <br />
+              {contents.fuel_consumption}
+            </div>
+            <div className={secondPage["specification-containers"]}>
+              Year:
+              <br />
+              {contents.yearcar}
+            </div>
+          </div>
+          <h3 className={secondPage["global-text"]}>{contents.rental_price}</h3>
         </div>
       )}
     </div>
