@@ -8,7 +8,7 @@ const path = require("path");
 const MainRouter = require("./routes");
 
 const PORT = process.env.EXPRESS_APP_PORT || "5000";
-const FRONT = process.env.FRONTEND_PORT || "http://localhost:3000";
+const FRONT = process.env.FRONTEND_URL || "http://localhost:3000";
 
 const app = express();
 app.use(express.json());
