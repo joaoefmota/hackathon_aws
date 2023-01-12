@@ -8,6 +8,7 @@ DROP TABLE IF EXISTS vehicles;
 
 CREATE TABLE
     `bookings` (
+        `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         title varchar(255),
         lastname varchar(255),
         name varchar(255),
@@ -19,6 +20,7 @@ CREATE TABLE
 
 CREATE TABLE
     `vehicles` (
+        `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         brand varchar(255),
         seats varchar(255),
         rental_price varchar(255),
