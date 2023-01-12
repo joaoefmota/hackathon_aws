@@ -23,14 +23,14 @@ export default function VehicleListItem({ vehicle }: VehicleListItemProps) {
     >
       <div className={styles["cars-container-individual-div"]}>
         <Image
-          alt="alt my ass"
+          alt="alt"
           src={`http://localhost:5000${vehicle.image_main}`}
           width={500}
           height={500}
         />
         <div className={styles["text-and-button"]}>
           <div className={styles["cars-container-individual-div-text"]}>
-            <h2>{vehicle.brand}</h2>
+            <h3>{vehicle.brand}</h3>
             <p>{vehicle.yearcar}</p>
           </div>
           <button

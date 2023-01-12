@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import VehicleListItem from "./VehicleListItem";
 import styles from "./vehicleList.module.scss";
 
@@ -8,13 +8,12 @@ export interface VehicleListProps {
 
 // This is the list that maps vehicles into a VehicleListItem each
 export default function VehicleList({ vehicles }: VehicleListProps) {
-  const [brand, setBrand] = React.useState<string>("");
-  const [year, setYear] = React.useState<number>(0);
-  console.log(brand);
+  const [brand, setBrand] = useState<string>("");
+  const [year, setYear] = useState<number>(0);
+  const [showAll, setShowAll] = useState<boolean>(false);
 
-  const [filteredVehicles, setFilteredVehicles] =
-    React.useState<Vehicle[]>(vehicles);
-  React.useEffect(() => {
+  const [filteredVehicles, setFilteredVehicles] = useState<Vehicle[]>(vehicles);
+  useEffect(() => {
     setFilteredVehicles(
       vehicles.filter((vehicle) => {
         let keep = true;
@@ -23,54 +22,65 @@ export default function VehicleList({ vehicles }: VehicleListProps) {
         return keep;
       })
     );
-  }, [brand, year]);
+  }, [brand, year, vehicles]);
+
+  const handleClick = () => {
+    setShowAll(!showAll);
+  };
 
   return (
     <div className={styles["formsearch"]}>
-      <form className={styles["formmake"]}>
-        <label htmlFor="vehicle-select">
-          by Make:
-          <select
-            className={styles["select"]}
-            value={brand}
-            onChange={(e) => setBrand(e.target.value)}
-          >
-            <option value="">Select brand...</option>
-            {vehicles.map((vehicle) => (
-              <option value={vehicle.brand}>{vehicle.brand}</option>
-            ))}
-          </select>
-        </label>
-      </form>
-      <form className={styles["formyear"]}>
-        <label htmlFor="vehicle-select">
-          by year:
-          <select
-            className={styles["select"]}
-            value={year}
-            onChange={(e) => setYear(parseInt(e.target.value))}
-          >
-            <option value={0}>Select year...</option>
-            {vehicles.map((vehicle) => (
-              <option value={vehicle.yearcar}>{vehicle.yearcar}</option>
-            ))}
-          </select>
-        </label>
-      </form>
+      <div className={styles["search-container"]}>
+        <select
+          className={styles["select"]}
+          value={brand}
+          onChange={(e) => setBrand(e.target.value)}
+        >
+          <option value="">by make</option>
+          {vehicles.map((vehicle) => (
+            <option value={vehicle.brand}>{vehicle.brand}</option>
+          ))}
+        </select>
 
-      {filteredVehicles == null ? (
-        vehicles.map((vehicle: Vehicle) => (
-          <div className={styles.vehicleContainer} key={vehicle.id}>
-            <VehicleListItem vehicle={vehicle} />
-          </div>
-        ))
-      ) : (
-        filteredVehicles.map((vehicle: Vehicle) => (
-          <div className={styles.vehicleContainer} key={vehicle.id}>
-            <VehicleListItem vehicle={vehicle} />
-          </div>
-        ))
-      )}
+        <select
+          className={styles["select"]}
+          value={year}
+          onChange={(e) => setYear(parseInt(e.target.value))}
+        >
+          <option value={0}>by year</option>
+          {vehicles.map((vehicle) => (
+            <option value={vehicle.yearcar}>{vehicle.yearcar}</option>
+          ))}
+        </select>
+      </div>
+
+      {filteredVehicles == null
+        ? (showAll || vehicles.length <= 4
+            ? vehicles
+            : vehicles.slice(0, 4)
+          ).map((vehicle: Vehicle) => (
+            <div className={styles.vehicleContainer} key={vehicle.id}>
+              <VehicleListItem vehicle={vehicle} />
+            </div>
+          ))
+        : (showAll || filteredVehicles.length <= 4
+            ? filteredVehicles
+            : filteredVehicles.slice(0, 4)
+          ).map((vehicle: Vehicle) => (
+            <div className={styles.vehicleContainer} key={vehicle.id}>
+              <VehicleListItem vehicle={vehicle} />
+            </div>
+          ))}
+      <div className={styles["btn-container"]}>
+        <button
+          className={
+            showAll || vehicles.length <= 4
+              ? styles["arrow-up"]
+              : styles["arrow-down"]
+          }
+          onClick={handleClick}
+        ></button>
+      </div>
     </div>
   );
 }

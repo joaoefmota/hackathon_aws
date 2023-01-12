@@ -8,8 +8,10 @@ function Footer() {
         <div className={styles["footertext"]}>HELLO@VINTAGE.DE</div>
         <div className={styles["footertext"]}> (478) 458-4258</div>
       </div>
-      <div className={styles["footerig"]}></div>
-      <div className={styles["footerfb"]}></div>
+      <div className={styles["ig-fb-container"]}>
+        <div className={styles["footerig"]}></div>
+        <div className={styles["footerfb"]}></div>
+      </div>
     </div>
   );
 }

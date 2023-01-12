@@ -3,6 +3,7 @@
   background-size: 100%;
   height: 7.5rem;
   display: flex;
+  justify-content: space-between;
 }
 
 .footertext {
@@ -13,21 +14,23 @@
   padding-top: 70px;
   margin-left: 20px;
 }
+.ig-fb-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+  margin: 1rem;;
+}
 
 .footerig {
   background: url("../images/ig.png");
-  background-size: cover;
-  height: 40px;
-  width: 50px;
-  margin-top: 70px;
-  margin-left: 20px;
+  background-size: contain;
+  height: 41px;
+  width: 40px;
 }
 
 .footerfb {
   background: url("../images/fb.png");
-  background-size: cover;
-  height: 40px;
-  width: 50px;
-  margin-top: 70px;
-  margin-left: 110px;
+  background-size: contain;
+  height: 41px;
+  width: 40px;
 }

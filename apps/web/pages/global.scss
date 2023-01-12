@@ -3,11 +3,12 @@
 //@tailwind components;
 //@tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap");
 
-.global-text {
-  font-family: "Playfair Display", serif;
+html {
+  font-family: 'Sofia Sans', serif;
   line-height: 1.15;
+  background: linear-gradient(179.99deg, #FFFFFF 15.22%, #EDEDED 76.06%);
 }
 
 body {
@@ -16,4 +17,8 @@ body {
 
 a {
   text-decoration: none;
+}
+
+h3, p {
+  margin: 0;
 }
