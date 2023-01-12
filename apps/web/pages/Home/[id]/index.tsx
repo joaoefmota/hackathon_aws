@@ -2,7 +2,8 @@ import * as React from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import CarContext from "../../../contexts/CarContext";
+import CarList from "../../../components/CarList";
 
 const SingleVehicle = () => {
   const router = useRouter();
@@ -31,20 +32,15 @@ const SingleVehicle = () => {
 
   return (
     <>
-      {contents == null ? (
-        <p>Loading...</p>
-      ) : (
-        <>
-          <p>Do the thing</p>
-          <Image src={mainImage} alt="Vehicle Main" width={256} height={256} />
-          <Image
-            src={secondImage}
-            alt="Vehicle Main"
-            width={256}
-            height={256}
-          />
-        </>
-      )}
+      <CarContext.Provider
+        value={{
+          contents: contents,
+          mainImage: mainImage,
+          secondImage: secondImage,
+        }}
+      >
+        <CarList />
+      </CarContext.Provider>
     </>
   );
 };
