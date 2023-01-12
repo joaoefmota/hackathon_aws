@@ -1,13 +1,13 @@
 import * as React from "react";
 import Image from "next/image";
 import { useState } from "react";
-import "../Home/home.scss";
+import styles from "../Home/home.module.scss";
 
 const Home = () => {
   return (
     <>
       {/*Header*/}
-      <div className="test">
+      <div className={styles["test"]}>
         <button>Log In</button>
         <button>Register</button>
         <button></button>
