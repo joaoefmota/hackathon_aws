@@ -1,0 +1,26 @@
+.arrow {
+    background: url("../images/arrow-back.png");
+    background-size: cover;
+    height: 18px;
+    width: 30px;
+    margin-top: 1rem;
+    margin-left: 20px;
+    &:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+        transition: all ease .3s;
+        cursor: pointer;
+    }
+
+}
+ .global-text {
+    margin-left: 1.3rem;
+ }
+
+.car-image {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}

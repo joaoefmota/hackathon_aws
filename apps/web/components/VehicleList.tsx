@@ -8,9 +8,22 @@ export interface VehicleListProps {
 
 // This is the list that maps vehicles into a VehicleListItem each
 export default function VehicleList({ vehicles }: VehicleListProps) {
-  const [show, setShow] = React.useState([]);
-  const [show2, setShow2] = React.useState([]);
-  console.log(show);
+  const [brand, setBrand] = React.useState<string>("");
+  const [year, setYear] = React.useState<number>(0);
+  console.log(brand);
+
+  const [filteredVehicles, setFilteredVehicles] =
+    React.useState<Vehicle[]>(vehicles);
+  React.useEffect(() => {
+    setFilteredVehicles(
+      vehicles.filter((vehicle) => {
+        let keep = true;
+        keep &&= brand === "" || vehicle.brand.includes(brand);
+        keep &&= year === 0 || vehicle.yearcar === year;
+        return keep;
+      })
+    );
+  }, [brand, year]);
 
   return (
     <div className={styles["formsearch"]}>
@@ -19,14 +32,12 @@ export default function VehicleList({ vehicles }: VehicleListProps) {
           by Make:
           <select
             className={styles["select"]}
-            value={show}
-            onChange={(a) => setShow(a.target.value)}
+            value={brand}
+            onChange={(e) => setBrand(e.target.value)}
           >
-            <option value="">---</option>
-            {vehicles.map((accessory) => (
-              <option value={accessory.id} name={accessory.brand}>
-                {accessory.brand}
-              </option>
+            <option value="">Select brand...</option>
+            {vehicles.map((vehicle) => (
+              <option value={vehicle.brand}>{vehicle.brand}</option>
             ))}
           </select>
         </label>
@@ -36,27 +47,21 @@ export default function VehicleList({ vehicles }: VehicleListProps) {
           by year:
           <select
             className={styles["select"]}
-            value={show2}
-            onChange={(a) => setShow2(a.target.value)}
+            value={year}
+            onChange={(e) => setYear(parseInt(e.target.value))}
           >
-            <option value="">---</option>
-            {vehicles.map((accessory) => (
-              <option value={accessory.id} name={accessory.brand}>
-                {accessory.yearcar}
-              </option>
+            <option value={0}>Select year...</option>
+            {vehicles.map((vehicle) => (
+              <option value={vehicle.yearcar}>{vehicle.yearcar}</option>
             ))}
           </select>
         </label>
       </form>
-      {vehicles
-        .filter((car) =>
-          show ? car.id == show : "Where are the cars ???"
-        )
-        .map((car) => {
-          <div className={styles.vehicleContainer} key={car.id}>
-            <VehicleListItem vehicle={vehicles} />
-          </div>;
-        })}
+      {filteredVehicles.map((vehicle) => (
+        <div className={styles.vehicleContainer} key={vehicle.id}>
+          <VehicleListItem vehicle={vehicle} />
+        </div>
+      ))}
     </div>
   );
 }
