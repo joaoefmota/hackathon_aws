@@ -25,8 +25,8 @@ export default function VehicleListItem({ vehicle }: VehicleListItemProps) {
         <Image
           alt="alt my ass"
           src={`http://localhost:5000${vehicle.image_main}`}
-          width={256}
-          height={256}
+          width={500}
+          height={500}
         />
         <div className={styles["text-and-button"]}>
           <div className={styles["cars-container-individual-div-text"]}>
