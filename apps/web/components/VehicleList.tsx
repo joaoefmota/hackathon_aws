@@ -1,5 +1,6 @@
 import React from "react";
 import VehicleListItem from "./VehicleListItem";
+import styles from "./vehicleList.module.scss";
 
 export interface VehicleListProps {
   vehicles: Vehicle[];
@@ -8,7 +9,7 @@ export interface VehicleListProps {
 // This is the list that maps vehicles into a VehicleListItem each
 export default function VehicleList({ vehicles }: VehicleListProps) {
   return (
-    <div>
+    <div className={styles.vehicleContainer} >
       {vehicles.map((vehicle) => (
         <VehicleListItem vehicle={vehicle} />
       ))}
