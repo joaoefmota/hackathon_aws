@@ -6,8 +6,6 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   const [vehicles, setVehicles] = React.useState([]);
-  const [show, setShow] = React.useState("");
-  const [show2, setShow2] = React.useState("");
 
   React.useEffect(() => {
     axios
@@ -40,48 +38,8 @@ export default function Home() {
           Choose your perfect vintage car
         </div>
       </div>
-      <div className={styles["formsearch"]}>
-        <form className={styles["formmake"]}>
-          <label htmlFor="vehicle-select">
-            by Make:
-            <select
-              className={styles["select"]}
-              value={show}
-              onChange={(a) => setShow(a.target.value)}
-            >
-              <option value="">---</option>
-              {vehicles.map((accessory) => (
-                <option value={accessory.id} name={accessory.brand}>
-                  {accessory.brand}
-                </option>
-              ))}
-            </select>
-          </label>
-        </form>
-        <form className={styles["formyear"]}>
-          <label htmlFor="vehicle-select">
-            by year:
-            <select
-              className={styles["select"]}
-              value={show2}
-              onChange={(a) => setShow2(a.target.value)}
-            >
-              <option value="">---</option>
-              {vehicles.map((accessory) => (
-                <option value={accessory.id} name={accessory.brand}>
-                  {accessory.yearcar}
-                </option>
-              ))}
-            </select>
-          </label>
-        </form>
-        {/*<VehicleList vehicles={vehicles} />*/}
-      </div>
-
-      {/*Body*/}
-      {/*Footer*/}
+      <VehicleList vehicles={vehicles} />
       <Footer />
-      {/*Footer*/}
     </div>
   );
 }
