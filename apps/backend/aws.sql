@@ -8,6 +8,7 @@ DROP TABLE IF EXISTS vehicles;
 
 CREATE TABLE
     `bookings` (
+        `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         title varchar(255),
         lastname varchar(255),
         name varchar(255),
@@ -19,6 +20,7 @@ CREATE TABLE
 
 CREATE TABLE
     `vehicles` (
+        `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         brand varchar(255),
         seats varchar(255),
         rental_price varchar(255),
@@ -47,8 +49,8 @@ values (
         'Manual',
         'test',
         1996,
-        'images/home-page/VolkswagenBeetleLightBlue.png',
-        'images/car-page/volkswagen-beetle-light-blue.png'
+        '/images/home-page/VolkswagenBeetleLightBlue.png',
+        '/images/car-page/volkswagen-beetle-light-blue.png'
     ), (
         'Ford Escort',
         5,
@@ -56,8 +58,8 @@ values (
         'Automatic',
         'test',
         2000,
-        'images/home-page/FordEscortWhite.png',
-        'images/car-page/ford-escort-blue.png'
+        '/images/home-page/FordEscortWhite.png',
+        '/images/car-page/ford-escort-blue.png'
     ), (
         'Ford Mustang',
         5,
@@ -65,8 +67,8 @@ values (
         'Automatic',
         'test',
         2001,
-        'images/home-page/FordMustangRed.png',
-        'images/car-page/ford-mustang-red.png'
+        '/images/home-page/FordMustangRed.png',
+        '/images/car-page/ford-mustang-red.png'
     ), (
         'MG Sport Vintage Car',
         5,
@@ -74,8 +76,8 @@ values (
         'Automatic',
         'test',
         1986,
-        'images/home-page/BlueSportVintage.png',
-        'images/car-page/red-sport-vintage.png'
+        '/images/home-page/BlueSportVintage.png',
+        '/images/car-page/red-sport-vintage.png'
     ), (
         'Volkswagen Camper Van',
         5,
@@ -83,8 +85,8 @@ values (
         'Automatic',
         'test',
         1999,
-        'images/home-page/VolkswagenCamperVanOrange.png',
-        'images/car-page/volkswagen-camper-van-orange.png'
+        '/images/home-page/VolkswagenCamperVanOrange.png',
+        '/images/car-page/volkswagen-camper-van-orange.png'
     ), (
         'Volkswagen Camper Van',
         5,
@@ -92,8 +94,8 @@ values (
         'Automatic',
         'test',
         1999,
-        'images/home-page/VolkswagenCamperVanYellow.png',
-        'images/car-page/volkswagen-camper-van-yellow.png'
+        '/images/home-page/VolkswagenCamperVanYellow.png',
+        '/images/car-page/volkswagen-camper-van-yellow.png'
     ), (
         'Ford Mustang',
         5,
@@ -101,8 +103,8 @@ values (
         'Automatic',
         'test',
         2000,
-        'images/home-page/FordMustangBlack.png',
-        'images/car-page/ford-mustang-black.png'
+        '/images/home-page/FordMustangBlack.png',
+        '/images/car-page/ford-mustang-black.png'
     );
 
 INSERT INTO

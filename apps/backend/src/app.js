@@ -3,6 +3,7 @@ const express = require("express");
 const database = require("./database");
 const cors = require("cors");
 const helmet = require("helmet");
+const path = require("path");
 
 const MainRouter = require("./routes");
 
@@ -17,6 +18,8 @@ app.use(
     origin: FRONT,
   })
 );
+
+app.use("/images", express.static(path.join(__dirname, "images")));
 
 app.get("/", (req, res) => {
   res.send("Hello there!");
