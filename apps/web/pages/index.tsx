@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div className={styles["global-text"]}>
       {/*Header*/}
       <div className={styles["test"]}>
         <div className={styles["test5"]}>
@@ -43,6 +43,6 @@ export default function Home() {
       {/*Footer*/}
       <Footer />
       {/*Footer*/}
-    </>
+    </div>
   );
 }

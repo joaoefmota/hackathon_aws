@@ -1,11 +1,11 @@
 //Tailwind Classes
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+//@tailwind base;
+//@tailwind components;
+//@tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
-html {
+.global-text {
   font-family: "Playfair Display", serif;
   line-height: 1.15;
 }
