@@ -30,7 +30,7 @@ export default function VehicleListItem({ vehicle }: VehicleListItemProps) {
         />
         <div className={styles["text-and-button"]}>
           <div className={styles["cars-container-individual-div-text"]}>
-            <h2>{vehicle.brand}</h2>
+            <h3>{vehicle.brand}</h3>
             <p>{vehicle.yearcar}</p>
           </div>
           <button

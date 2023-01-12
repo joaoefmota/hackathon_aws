@@ -8,6 +8,7 @@
 html {
   font-family: 'Sofia Sans', serif;
   line-height: 1.15;
+  background: linear-gradient(179.99deg, #FFFFFF 15.22%, #EDEDED 76.06%);
 }
 
 body {
@@ -16,4 +17,8 @@ body {
 
 a {
   text-decoration: none;
+}
+
+h3, p {
+  margin: 0;
 }

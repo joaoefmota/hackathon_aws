@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import CarContext from "../../../contexts/CarContext";
 import CarList from "../../../components/CarList";
 
-import styles from "./singlevehicle.module.scss";
-
 const SingleVehicle = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -33,7 +31,7 @@ const SingleVehicle = () => {
     : undefined;
 
   return (
-    <div className={styles["bg-color"]}>
+    <div>
       <CarContext.Provider
         value={{
           contents: contents,

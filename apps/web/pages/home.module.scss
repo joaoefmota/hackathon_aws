@@ -1,110 +1,108 @@
-.test {
-  height: 300px;
-  background: url("../images/HeaderImg.jpg") no-repeat center;
-  background-size: cover;
-  width: 100%;
+
+.bg-header {
+    height: 350px;
+    background: url("../images/HeaderImg.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
 }
 
-.test1 {
+.button {
   border-radius: 20px;
   background-color: #d26803;
   color: white;
-  padding: 5px 5px 5px 5px;
-  width: 70px;
+  border: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 1.8rem;
   margin-bottom: 5px;
-  font-size: 10px;
-  border-color: #d26803;
-  box-shadow: 2px 1px 5px black;
+  box-shadow: #11111a33 0 4px 16px, #11111a33 0 8px 24px, #11111a33 0 16px 56px;
 }
 
-.test2 {
+.buttons-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  margin-right: 10px;
+  margin-right: 1.5rem;
+  gap: 0.5rem;
 }
 
-.test4 {
+.burger-btn {
   height: 20px;
   width: 40px;
   background: url("../images/burger.png") no-repeat center;
   background-size: cover;
   border-radius: 40px;
-  margin-left: 20px;
-  margin-right: 130px;
+  margin-left: 1.5rem;
   border-color: white;
-  box-shadow: 2px 1px 5px black;
+  box-shadow: #11111a33 0 4px 16px, #11111a33 0 8px 24px, #11111a33 0 16px 56px;
+  border: 0;
 }
 
-.test5 {
+.top-header {
   display: flex;
-  padding-top: 10px;
+  justify-content: space-between;
+  padding-top: 1rem;
 }
 
-.test6 {
+.logo {
   background: url("../images/Logo.png") no-repeat center;
   background-size: cover;
   height: 40px;
-  width: 50px;
-  margin-right: 80px;
-}
-
-.body {
-  background-color: #e7e8e7;
+  width: 70px;
 }
 
 .bodytext {
+  margin-top: 1rem;
   text-align: center;
   padding-top: 30px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 900;
-  font-family: "Times New Roman", Times, serif;
 }
 
 .bodytext2 {
   text-align: center;
   margin-top: 5px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 900;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 2rem;
 }
 
 .cars-container-individual {
   background: #d26803;
-  box-shadow: 0px 2px 4px rgba(35, 31, 32, 0.2),
-    0px 0px 1px rgba(35, 31, 32, 0.1);
-  max-width: 500px;
+  box-shadow: #11111a33 0 4px 16px, #11111a33 0 8px 24px, #11111a33 0 16px 56px;
   margin-bottom: 2rem;
-  border-radius: 8px;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 .cars-container-individual-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 2rem;
-  min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
 }
 
 .cars-container-individual-div > img {
-  border-radius: 8px;
-  height: 500px;
+    height: auto;
+    width: 300px;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; 
 }
 
 .cars-container-individual-div-text {
-  margin: 1rem;
   color: #fff;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  gap: 0.5rem;
   justify-content: center;
-  max-width: 50%;
+  padding: 1rem;
 }
 
 .cars-container-individual-div-text > p {
@@ -112,12 +110,12 @@
 }
 
 .buttonStyle {
-  width: 50px;
-  height: 50px;
-  left: 197px;
-  top: 180px;
+  width: 40px;
+  height: 40px;
   background: #ffffff;
-  border-radius: 40px;
+  border-radius: 20px;
+  border-style: none;
+  margin-bottom: 1rem;
   background: url("../images/buttonBG.png") 50% 50% no-repeat;
 }
 
@@ -127,7 +125,7 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: flex-end;
+  justify-content: space-evenly;
+  align-content: center;
 }
 

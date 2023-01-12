@@ -20,13 +20,13 @@ export default function Home() {
   return (
     <div>
       {/*Header*/}
-      <div className={styles["test"]}>
-        <div className={styles["test5"]}>
-          <button className={styles["test4"]}></button>
-          <div className={styles["test6"]}></div>
-          <div className={styles["test2"]}>
-            <button className={styles["test1"]}>Log In</button>
-            <button className={styles["test1"]}>Register</button>
+      <div className={styles["bg-header"]}>
+        <div className={styles["top-header"]}>
+          <button className={styles["burger-btn"]}></button>
+          <div className={styles["logo"]}></div>
+          <div className={styles["buttons-container"]}>
+            <button className={styles["button"]}>Log In</button>
+            <button className={styles["button"]}>Register</button>
           </div>
         </div>
       </div>
