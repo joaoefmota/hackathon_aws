@@ -1,3 +1,5 @@
+@import "./global.scss";
+
 .test{
     height: 300px;
     background: url("../images/HeaderImg.jpg") no-repeat center;
@@ -65,7 +67,6 @@ padding-top: 10px;
     padding-top: 30px;
     font-size: 25px;
     font-weight: 900;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -74,6 +75,7 @@ padding-top: 10px;
     margin-top: 5px;
     font-size: 15px;
     font-weight: 900;
+<<<<<<< HEAD
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
@@ -105,4 +107,6 @@ border-radius: 10px;
     width:100px;
     background-color: white;
     border-radius: 10px;
+=======
+>>>>>>> fcbaedf14cb57dc3eb993527710201c9feccc090
 }
