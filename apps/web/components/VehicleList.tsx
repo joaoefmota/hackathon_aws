@@ -57,11 +57,20 @@ export default function VehicleList({ vehicles }: VehicleListProps) {
           </select>
         </label>
       </form>
-      {filteredVehicles.map((vehicle) => (
-        <div className={styles.vehicleContainer} key={vehicle.id}>
-          <VehicleListItem vehicle={vehicle} />
-        </div>
-      ))}
+
+      {filteredVehicles == null ? (
+        vehicles.map((vehicle: Vehicle) => (
+          <div className={styles.vehicleContainer} key={vehicle.id}>
+            <VehicleListItem vehicle={vehicle} />
+          </div>
+        ))
+      ) : (
+        filteredVehicles.map((vehicle: Vehicle) => (
+          <div className={styles.vehicleContainer} key={vehicle.id}>
+            <VehicleListItem vehicle={vehicle} />
+          </div>
+        ))
+      )}
     </div>
   );
 }
