@@ -2,6 +2,10 @@ CREATE DATABASE aws;
 
 USE aws;
 
+DROP TABLE IF EXISTS bookings;
+
+DROP TABLE IF EXISTS vehicles;
+
 CREATE TABLE
     `bookings` (
         title varchar(255),
@@ -20,17 +24,21 @@ CREATE TABLE
         rental_price varchar(255),
         gear_box varchar(255),
         fuel_consumption varchar(255),
-        yearcar int NOT NULL
+        yearcar int NOT NULL,
+        image_main varchar(255),
+        image_second varchar(255)
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
-insert into
+INSERT INTO
     vehicles (
         brand,
         seats,
         rental_price,
         gear_box,
         fuel_consumption,
-        yearcar
+        yearcar,
+        image_main,
+        image_second
     )
 values (
         'Volkswagen',
@@ -38,17 +46,66 @@ values (
         '20€/h',
         'Manual',
         'test',
-        1996
+        1996,
+        'images/home-page/VolkswagenBeetleLightBlue.png',
+        'images/car-page/volkswagen-beetle-light-blue.png'
     ), (
-        'Mercedes',
+        'Ford Escort',
         5,
         '30€/h',
         'Automatic',
         'test',
-        2000
+        2000,
+        'images/home-page/FordEscortWhite.png',
+        'images/car-page/ford-escort-blue.png'
+    ), (
+        'Ford Mustang',
+        5,
+        '50€/h',
+        'Automatic',
+        'test',
+        2001,
+        'images/home-page/FordMustangRed.png',
+        'images/car-page/ford-mustang-red.png'
+    ), (
+        'MG Sport Vintage Car',
+        5,
+        '60€/h',
+        'Automatic',
+        'test',
+        1986,
+        'images/home-page/BlueSportVintage.png',
+        'images/car-page/red-sport-vintage.png'
+    ), (
+        'Volkswagen Camper Van',
+        5,
+        '20€/h',
+        'Automatic',
+        'test',
+        1999,
+        'images/home-page/VolkswagenCamperVanOrange.png',
+        'images/car-page/volkswagen-camper-van-orange.png'
+    ), (
+        'Volkswagen Camper Van',
+        5,
+        '20€/h',
+        'Automatic',
+        'test',
+        1999,
+        'images/home-page/VolkswagenCamperVanYellow.png',
+        'images/car-page/volkswagen-camper-van-yellow.png'
+    ), (
+        'Ford Mustang',
+        5,
+        '30€/h',
+        'Automatic',
+        'test',
+        2000,
+        'images/home-page/FordMustangBlack.png',
+        'images/car-page/ford-mustang-black.png'
     );
 
-insert into
+INSERT INTO
     bookings (
         title,
         lastname,
