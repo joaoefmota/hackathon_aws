@@ -1,7 +1,21 @@
+import axios from "axios";
 import * as React from "react";
+import VehicleList from "../components/VehicleList";
 import styles from "./home.module.scss";
 
 export default function Home() {
+  const [vehicles, setVehicles] = React.useState([]);
+
+  React.useEffect(() => {
+    axios
+      .get(`http://localhost:5000/api/vehicles`)
+      .then((response) => response.data)
+      .then((result) => {
+        setVehicles(result);
+        console.log(result);
+      });
+  }, []);
+
   return (
     <>
       {/*Header*/}
@@ -22,6 +36,7 @@ export default function Home() {
         <div className={styles["bodytext2"]}>
           Choose your perfect vintage car
         </div>
+        <VehicleList vehicles={vehicles} /  >
       </div>
       {/*Body*/}
       {/*Footer*/}
