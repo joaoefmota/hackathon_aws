@@ -1,4 +1,4 @@
-import Home from ".";
+import Home from "./Home/index";
 // import { Button } from "ui";
 
 export default function Web() {
