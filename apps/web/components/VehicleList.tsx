@@ -53,24 +53,25 @@ export default function VehicleList({ vehicles }: VehicleListProps) {
           ))}
         </select>
       </div>
-
-      {filteredVehicles == null
-        ? (showAll || vehicles.length <= 4
-            ? vehicles
-            : vehicles.slice(0, 4)
-          ).map((vehicle: Vehicle) => (
-            <div className={styles.vehicleContainer} key={vehicle.id}>
-              <VehicleListItem vehicle={vehicle} />
-            </div>
-          ))
-        : (showAll || filteredVehicles.length <= 4
-            ? filteredVehicles
-            : filteredVehicles.slice(0, 4)
-          ).map((vehicle: Vehicle) => (
-            <div className={styles.vehicleContainer} key={vehicle.id}>
-              <VehicleListItem vehicle={vehicle} />
-            </div>
-          ))}
+      <div className={styles["mainbox-car"]}>
+        {filteredVehicles == null
+          ? (showAll || vehicles.length <= 4
+              ? vehicles
+              : vehicles.slice(0, 4)
+            ).map((vehicle: Vehicle) => (
+              <div className={styles.vehicleContainer} key={vehicle.id}>
+                <VehicleListItem vehicle={vehicle} />
+              </div>
+            ))
+          : (showAll || filteredVehicles.length <= 4
+              ? filteredVehicles
+              : filteredVehicles.slice(0, 4)
+            ).map((vehicle: Vehicle) => (
+              <div className={styles.vehicleContainer} key={vehicle.id}>
+                <VehicleListItem vehicle={vehicle} />
+              </div>
+            ))}
+      </div>
       <div className={styles["btn-container"]}>
         <button
           className={
