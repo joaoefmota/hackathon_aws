@@ -121,12 +121,8 @@
 }
 
 .buttonStyle:hover {
+  transform: translateY(-3px);
   opacity: 0.5;
-}
-
-.button:active {
-  background: #2980b9;
-  top: 2px;
 }
 
 .text-and-button {
