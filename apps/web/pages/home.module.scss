@@ -82,12 +82,12 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  min-width: 100%;
+  min-width: 250px;
 }
 
 .cars-container-individual-div > img {
   height: auto;
-  width: 500px;
+  width: 100%;
   object-fit: cover;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -135,12 +135,88 @@
   align-content: center;
 }
 
-@media screen and (max-width: 500px) {
+@media (min-width: 1200px) {
+  .bg-header {
+    height: 800px;
+  }
+
+  .top-header {
+    padding: 3rem;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    width: 11rem;
+    height: 3.5rem;
+  }
+
+  .buttons-container {
+    gap: 1.5rem;
+  }
+
+  .logo {
+    height: 80px;
+    width: 135px;
+  }
+
+  .burger-btn {
+    height: 70px;
+    width: 100px;
+  }
+
+  .bodytext {
+    margin-top: 2rem;
+    padding-top: 30px;
+    font-size: 4rem;
+  }
+
+  .bodytext2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .cars-container-individual-div {
+    width: 22rem;
+    height: 27rem;
+    justify-content: space-around;
+  }
+
   .cars-container-individual-div > img {
-    max-width: 250px;
+    height: 320px;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .text-and-button {
+    margin: 2rem 0;
+  }
+
+  .cars-container-individual-div-text {
+    font-size: 1.3rem;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .cars-container-individual-div-text > p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cars-container-individual {
+    max-width: 255px;
   }
 
   .cars-container-individual-div-text > h3 {
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .cars-container-individual-div {
+    height: 22rem;
   }
 }

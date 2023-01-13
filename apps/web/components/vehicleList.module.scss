@@ -17,7 +17,7 @@
     justify-content: center;
     text-align: center;
     color:  #898989;
-    min-height: 4em;
+    height: 4em;
     background: #ffffff;
     border-radius: 25px;
     border-color: #ffffff;;
@@ -50,4 +50,45 @@
   height:4.1rem;
   background: url("../images/arrow-up.png");
   background-size: cover;
+}
+
+@media (min-width: 900px) {
+  .mainbox-car {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0rem 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .search-container {
+    gap: 5rem;
+    padding: 1rem 3rem;
+    margin: 4rem 0rem;
+  
+    .select {
+      height: 4rem;
+      border-radius: 40px;
+      width: 30rem;
+      padding: 1rem;
+      font-size: 1.5rem;
+   }
+   
+  }
+
+  .vehicleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+  }
+
+  .mainbox-car {
+    margin: 0rem 1rem;
+  }
+  
+
 }
