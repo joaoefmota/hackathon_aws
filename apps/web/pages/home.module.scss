@@ -1,9 +1,8 @@
-
 .bg-header {
-    height: 350px;
-    background: url("../images/HeaderImg.jpg") no-repeat center;
-    background-size: cover;
-    width: 100%;
+  height: 350px;
+  background: url("../images/HeaderImg.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
 }
 
 .button {
@@ -79,19 +78,19 @@
 }
 
 .cars-container-individual-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-width: 100%;
 }
 
 .cars-container-individual-div > img {
-    height: auto;
-    width: 300px;
-    object-fit: cover;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem; 
+  height: auto;
+  width: 500px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .cars-container-individual-div-text {
@@ -117,6 +116,13 @@
   border-style: none;
   margin-bottom: 1rem;
   background: url("../images/buttonBG.png") 50% 50% no-repeat;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.buttonStyle:hover {
+  transform: translateY(-3px);
+  opacity: 0.5;
 }
 
 .text-and-button {
