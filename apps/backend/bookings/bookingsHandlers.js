@@ -23,7 +23,30 @@ const getBookingById = (req, res) => {
     });
 };
 
+const postSubmitForm = (req, res) => {
+  const { lastname, name, email, phone_number } = req.body;
+  database
+    .query(
+      "INSERT INTO bookings (lastname, name, email, phone_number) VALUES (?, ?, ?, ?)",
+      [lastname, name, email, phone_number]
+    )
+    .then(([result]) => {
+      if (result.affectedRows === 0) {
+        res.status(400).send("Message was not submitted.");
+      } else {
+        const newMessage = result.insertId;
+        res.status(201).json(newMessage.toString());
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      console.error(err);
+      res.status(500).send("Internal Server Error");
+    });
+};
+
 module.exports = {
   getAllBookings,
   getBookingById,
+  postSubmitForm,
 };
