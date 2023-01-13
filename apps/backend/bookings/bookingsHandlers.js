@@ -14,7 +14,7 @@ const getBookingById = (req, res) => {
       if (result[0] != null) {
         res.json(result[0]);
       } else {
-        res.status(404).send("User not found");
+        res.status(404).send("Booking not found");
       }
     })
     .catch((err) => {

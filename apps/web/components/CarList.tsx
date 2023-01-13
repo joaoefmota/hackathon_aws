@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import axios from "axios";
 
@@ -8,7 +8,12 @@ import CarContext from "../contexts/CarContext";
 import secondPage from "./carList.module.scss";
 
 function CarList() {
-  const { contents, secondImage } = useContext(CarContext);
+  interface CarContext {
+    contents: string[];
+    secondImage: string;
+  }
+
+  const { contents, secondImage } = useContext(CarContext) as CarContext;
   const [formOpenned, setFormOpenned] = useState<boolean>(false);
   // useState to control the input fields of contact form
   const [inputFields, setInputFields] = useState({
