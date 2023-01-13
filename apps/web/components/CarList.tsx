@@ -104,7 +104,7 @@ function CarList() {
             width={220}
             height={180}
           />
-          <h3 className={secondPage["global-text"]}>Specifications</h3>
+          <h4 className={secondPage["global-text"]}>Specifications</h4>
           <div className={secondPage["specification-grid"]}>
             <div className={secondPage["specification-containers"]}>
               <p>
@@ -121,20 +121,24 @@ function CarList() {
               </p>
             </div>
             <div className={secondPage["specification-containers"]}>
-              Fuel consumption:
-              <br />
-              {contents.fuel_consumption}
+              <p>
+                Fuel consumption:
+                <br />
+                {contents.fuel_consumption}
+              </p>
             </div>
             <div className={secondPage["specification-containers"]}>
-              Year:
-              <br />
-              {contents.yearcar}
+              <p>
+                Year:
+                <br />
+                {contents.yearcar}
+              </p>
             </div>
           </div>
           <div className={secondPage["btn-text-container"]}>
-            <h3 className={secondPage["global-text"]}>
+            <h4 className={secondPage["global-text"]}>
               {contents.rental_price}
-            </h3>
+            </h4>
             <button onClick={handleOpenForm} className={secondPage["btn"]}>
               Rent
             </button>
@@ -142,9 +146,9 @@ function CarList() {
 
           {formOpenned && (
             <div className={secondPage["form"]}>
-              <h3 className={secondPage["form-text"]}>
+              <h4 className={secondPage["form-text"]}>
                 Please fill out the form below
-              </h3>
+              </h4>
               <form className={secondPage["form-input-fields"]}>
                 <div className={secondPage["fullname-container"]}>
                   <div className={secondPage["last-name"]}>

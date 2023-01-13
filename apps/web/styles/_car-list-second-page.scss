@@ -162,4 +162,38 @@
      }
    }
 
+   .global-text {
+    margin-left: 6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+ }
+
+ .arrow {
+  height: 30px;
+  width: 50px;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
+
+.form-text {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 3rem;
+ }
+
+ .form-input-fields {
+  margin: 0 10rem;
+  font-size: 1.8rem;
+
+  input {
+    border-radius: 3.125rem;
+    resize: none;
+    height: 5rem;
+    font-size: 1.5rem;
+    
   }
+ }
+
+
+}
