@@ -19,6 +19,36 @@ a {
   text-decoration: none;
 }
 
-h3, p {
+h2, h3, p {
   margin: 0;
+  
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+h3, h4 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+@media (min-width: 1200px) {
+
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1.5rem;
+  }
 }
